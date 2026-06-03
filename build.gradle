@@ -3,7 +3,7 @@ plugins {
     id 'application'
 }
 
-group = 'de.lazyjava'
+group = 'com.aresstack'
 version = '0.1.0-SNAPSHOT'
 
 java {
