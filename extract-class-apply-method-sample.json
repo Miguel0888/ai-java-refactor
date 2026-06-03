@@ -1,0 +1,18 @@
+{
+  "operation": "extract-class",
+  "status": "SAFE",
+  "sourceClass": "org.example.Sample",
+  "targetClass": "SampleState",
+  "targetFile": "/mnt/data/extract-method-sample/src/main/java/org/example/SampleState.java",
+  "movedSymbols": ["org.example.Sample#x", "org.example.Sample#inc()"],
+  "diagnostics": [],
+  "edits": [
+    {"file": "/mnt/data/extract-method-sample/src/main/java/org/example/Sample.java", "start": 100, "end": 100, "replacement": "sampleState.", "reason": "delegate moved method call"},
+    {"file": "/mnt/data/extract-method-sample/src/main/java/org/example/Sample.java", "start": 44, "end": 68, "replacement": "", "reason": "remove moved member"},
+    {"file": "/mnt/data/extract-method-sample/src/main/java/org/example/Sample.java", "start": 114, "end": 160, "replacement": "", "reason": "remove moved member"},
+    {"file": "/mnt/data/extract-method-sample/src/main/java/org/example/Sample.java", "start": 68, "end": 68, "replacement": "    private final SampleState sampleState = new SampleState();\n\n", "reason": "insert delegate field"}
+  ]
+  ,"createdFiles": [
+    {"file": "/mnt/data/extract-method-sample/src/main/java/org/example/SampleState.java", "characters": 113}
+  ]
+}

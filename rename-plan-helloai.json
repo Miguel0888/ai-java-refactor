@@ -1,0 +1,16 @@
+{
+  "operation": "rename",
+  "status": "SAFE",
+  "targetSymbol": "org.example.BallPanel#moveBall()",
+  "newName": "updateBallPosition",
+  "parsedFiles": 2,
+  "resolvedUsages": 2,
+  "unresolvedCandidates": 0,
+  "diagnostics": [],
+  "edits": [
+    {"file": "/mnt/data/helloai/HelloAI-master/src/main/java/org/example/BallPanel.java", "start": 3348, "end": 3356, "replacement": "updateBallPosition", "reason": "rename declaration"},
+    {"file": "/mnt/data/helloai/HelloAI-master/src/main/java/org/example/BallAnimator.java", "start": 734, "end": 742, "replacement": "updateBallPosition", "reason": "rename reference"}
+  ],
+  "unresolved": [
+  ]
+}
