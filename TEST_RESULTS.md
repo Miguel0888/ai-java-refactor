@@ -3,11 +3,11 @@
 ## Build
 
 ```text
-./build.sh
+javac -source 1.8 -target 1.8 -cp javaparser-core-3.26.4.jar:javaparser-symbol-solver-core-3.26.4.jar ...
 SUCCESS
 ```
 
-Der Code wurde mit `javac -source 1.8 -target 1.8` gebaut.
+Die Quellen kompilieren weiterhin mit Java-8-Target. Der neue `./build.sh` nutzt Gradle und lädt JavaParser über Maven Central. Dieser Gradle-Download wurde in der Sandbox nicht ausgeführt, weil dort kein Maven-Central-Zugriff verfügbar ist.
 
 ## HelloAI: Rename
 

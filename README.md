@@ -26,7 +26,16 @@ Operation Request
 ./build.sh
 ```
 
-Der Build verwendet die lokalen JARs in `lib/` und benötigt keinen Internetzugriff.
+Der Build verwendet Gradle und lädt JavaParser aus Maven Central. Fremde JARs werden nicht versioniert.
+
+Die relevanten Dependencies stehen in `build.gradle`:
+
+```groovy
+dependencies {
+    implementation 'com.github.javaparser:javaparser-core:3.26.4'
+    implementation 'com.github.javaparser:javaparser-symbol-solver-core:3.26.4'
+}
+```
 
 ## Ausführen
 
@@ -106,4 +115,4 @@ Noch bewusst konservativ:
 
 ## Hinweise
 
-`javaparser-symbol-solver-core` liegt im `lib/`-Ordner, der aktuelle MVP verwendet aber primär `javaparser-core` plus einen eigenen leichten Resolver. Das hält das Tool klein und vermeidet im ersten Schnitt zusätzliche transitive Abhängigkeiten.
+`javaparser-core` und `javaparser-symbol-solver-core` sind als Gradle/Maven-Central-Dependencies eingebunden. Der aktuelle MVP verwendet primär `javaparser-core` plus einen eigenen leichten Resolver; der Symbol Solver bleibt als austauschbare Resolver-Grundlage vorgesehen.
